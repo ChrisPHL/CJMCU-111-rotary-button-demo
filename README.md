@@ -20,9 +20,7 @@ It also is prepared to catch push button events of the CJMCU-111 rotary button. 
 resistor at push button line is bridged (0 Ohm - In other words: Just short pins 4 and 1 of the rotary button.).
 By doing this hack there is a chance to do a rotary button push by turning CCW the wheel but
 turning it back CW when in the middle of the way of the actual rotary tick.
-If you want to prevent this possiblilty you can exchange the 3k Ohm resister with about 500 to
-1500 Ohm instead and connect Ga to an analog input of the Arduino. You can then distinct the cause
-for the low level of Ga within ISR in case kRotationStatusStartLorPush by calling analogRead(Ax) where x is the number of the analog
+If you want to prevent this possiblilty you can bridge the 3k Ohm resister with 330 Ohm instead and connect Ga to an analog input of the Arduino. You can then distinct the cause for the low level of Ga within ISR in case kRotationStatusStartLorPush by calling analogRead(Ax) where x is the number of the analog
 input pin used.
 
 Overall performance is pretty stable though. :-)
